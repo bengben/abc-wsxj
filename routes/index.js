@@ -5,9 +5,17 @@ const cheerio = require('cheerio');
 const spider = require('../bin/spider');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  spider.hellokitty();
-  res.render('index', { title: 'Express' });
+router.get('/', function (req, res, next) {
+
+  var promise = new Promise(function (resolve, reject) {
+    const len = spider.allMarkets();
+    console.log('len:', len)
+    res.render('index', { title: len});
+  });
+
+    
+
+
 });
 
 module.exports = router;
