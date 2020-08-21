@@ -5,7 +5,8 @@ module.exports = {
         user: 'abc-wsxj',
         password: 'ZfAztMWn46f8s8D2',
         database: 'abc-wsxj',
-        port: '3306'
+        port: '3306',
+        // debug:true
     }
 }
 
