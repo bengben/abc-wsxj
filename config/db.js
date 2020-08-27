@@ -6,7 +6,7 @@ module.exports = {
         password: 'ZfAztMWn46f8s8D2',
         database: 'abc-wsxj',
         port: '3306',
-        // debug:true
+        debug:true
     }
 }
 

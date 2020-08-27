@@ -1,7 +1,7 @@
-const express = require('express');
-const router = express.Router();
-const spider = require('../lib/spider');
-const db = require('../config/db');
+var express = require('express');
+var router = express.Router();
+var spider = require('../lib/spider');
+var db = require('../config/db');
 
 
 
@@ -10,10 +10,7 @@ const db = require('../config/db');
  */
 router.get('/updateMarkets',  function (req, res, next) {
 
-    let  rtn = spider.updateMarkets().then(function(result){
-        console.log('=========2>>>>>>>>>>>>>>',result)
-    });
-    console.log('=============>',rtn)
+   spider.updateMarkets();
     
 });
 
