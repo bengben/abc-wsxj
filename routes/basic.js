@@ -15,6 +15,19 @@ router.get('/updateMarkets',  function (req, res, next) {
 });
 
 
+/**
+ * 更新项目信息
+ */
+router.get('/updateProjects',  function (req, res, next) {
+
+   spider.updateProjects();
+    
+});
+
+
+
+
+
 
 
 
