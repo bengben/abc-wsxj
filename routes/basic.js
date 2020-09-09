@@ -18,9 +18,14 @@ router.get('/updateMarkets',  function (req, res, next) {
 /**
  * 更新项目信息
  */
-router.get('/updateProjects',  function (req, res, next) {
+ router.get('/updateProjects',  function (req, res, next) {
 
-   spider.updateProjects();
+   var result  =  spider.updateAllProjects();
+   if(!result){
+      res.json({ success: -1, data: null, msg: e });
+   }
+   res.json({ success: 1, data: result, msg: '入库成功' });
+
     
 });
 
