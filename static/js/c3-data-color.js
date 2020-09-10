@@ -1,0 +1,1 @@
+$(function(){var b=c3.generate({bindto:"#data-color",size:{height:400},data:{columns:[["data1",130,200,150,40,360,50],["data2",100,130,100,240,130,350],["data3",300,240,360,400,250,250]],type:"bar",colors:{data1:"#00acc1",data2:"#1e88e5"},color:function(c,d){return d.id&&"data3"===d.id?d3.rgb(c).darker(d.value/150):c}},grid:{y:{show:!0}}})});
