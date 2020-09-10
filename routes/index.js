@@ -6,11 +6,8 @@ const cheerio = require("cheerio");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  spider.allMarkets().then(function (result) {
-    res.render("index", {
-      title: "spider对象:" + Object.keys(result.data.markets.主城九区).length,
-    });
-  });
+  res.render('index', { title: '首页:' });
+
 });
 
 /**
