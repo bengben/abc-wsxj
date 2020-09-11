@@ -1,0 +1,1 @@
+$(function(){$("#main-wrapper").AdminSettings({Theme:false,Layout:"horizontal",LogoBg:"skin1",NavbarBg:"skin1",SidebarType:"full",SidebarColor:"skin6",SidebarPosition:true,HeaderPosition:true,BoxedLayout:true,})});

@@ -1,0 +1,1 @@
+$(function(a){var b=c3.generate({bindto:"#data-from-url",size:{height:400},color:{pattern:["#1e88e5","#00acc1","#fc4b6c"]},data:{url:"../../dist/js/pages/c3-chart/c3_test.csv"},grid:{y:{show:true}},});setTimeout(function(){c3.generate({data:{url:"../../dist/js/pages/c3-chart/c3_test.json",mimeType:"json"}})},1000)});

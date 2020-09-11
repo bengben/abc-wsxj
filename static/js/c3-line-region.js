@@ -1,0 +1,1 @@
+$(function(){var a=c3.generate({bindto:"#line-region",size:{height:400},point:{r:4},color:{pattern:["#1e88e5","#00acc1"]},data:{columns:[["data1",30,200,100,400,0,100],["data2",100,200,10,400,100,25]],regions:{data1:[{start:1,end:2,style:"dashed"},{start:3}],data2:[{end:3}]}},grid:{y:{show:true}}})});
