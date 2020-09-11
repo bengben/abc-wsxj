@@ -1,44 +1,29 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-var spider = require('../lib/spider');
-var db = require('../config/db');
-
-
+var spider = require("../lib/spider");
+var db = require("../config/db");
 
 /**
  * 更新区县基础数据到库
  */
-router.get('/updateMarkets',  function (req, res, next) {
+router.get("/updateMarkets", function (req, res, next) {
+  spider.updateMarkets();
+});
 
-   spider.updateMarkets();
-    
+/**
+ * 初始化项目信息
+ */
+router.get("/initProjects", function (req, res, next) {
+  spider.initAllProjects(res);
 });
 
 
 /**
- * 更新项目信息
+ * 初始化项目信息
  */
- router.get('/updateProjects',  function (req, res, next) {
-
-   var result  =  spider.updateAllProjects();
-   if(!result){
-      res.json({ success: -1, data: null, msg: e });
-   }
-   res.json({ success: 1, data: result, msg: '入库成功' });
-
-    
-});
-
-
-
-
-
-
-
-
-
-
-
+router.get("/updateProjects", function (req, res, next) {
+   spider.updateProjects(res);
+ });
 
 
 
