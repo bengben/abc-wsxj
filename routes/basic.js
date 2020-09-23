@@ -29,11 +29,11 @@ router.get("/updateProjects", function (req, res, next) {
 /**
  * 得到项目详细信息
  */
-router.get("/initPackage", async function (req, res, next) {
-  console.log('/initPackage');
+router.get("/initPackage/:id", async function (req, res, next) {
+  console.log('/initPackage/',req.params.id);
   // spider.initProjectDetail(res);
   // res.send(result);
-  spider.getInfoById();
+  res.send(spider.getInfoById(req.params.id));
   // var a = await spider.getInfoById();
   // var b = await spider.getAttchments();
   // console.log('aaaaaa:', a);
